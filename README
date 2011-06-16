@@ -11,5 +11,6 @@ This contains 50 sudoku puzzles - it is from http://projecteuler.net/.
 
 === Compile and Run ===
 To compile: ghc sudoku.hs
-To run the solver just run the generated sudoku executable a puzzle file.
+Run the solver by passing it a puzzle file in the first argument.
 i.e. $./sudoku puzzles
+The solver expects to find "minisat" in the working directory.

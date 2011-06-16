@@ -114,23 +114,3 @@ solveList list = do
 	solution <- sudokuSolve $ stringToMatrix $ unlines puzzle
 	putStrLn $ showMatrix solution
 	solveList rest
-
-{-
--- Project Euler solution.
-main = do 
-	fileName <- head <$> getArgs
-	contents <- lines <$> readFile fileName
-	let pruned = filter (isDigit.head) contents
-	ans <- solveList pruned 0
-	putStrLn $ show ans
-
-solveList [] acc = do return acc
-solveList list acc = do
-	let (puzzle, rest) = splitAt 9 list
-	solution <- sudokuSolve $ stringToMatrix $ unlines puzzle
-	putStrLn $ showMatrix solution
-	let firstRow = head solution
-	let add = (firstRow !! 0) * 100 
-                   + (firstRow !! 1) *10 + (firstRow !! 2)
-	solveList rest (acc + add)
--}

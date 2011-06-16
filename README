@@ -7,7 +7,7 @@ A MiniSat binary, version 2.2.0, built on 64-bit linux (ubuntu 10.4) is included
 You can replace this with your own. See http://minisat.se/.
 
 An example puzzle file is included in "puzzles", the format should be self explanatory.
-This contains 50 sudoku puzzles.
+This contains 50 sudoku puzzles - it is from http://projecteuler.net/.
 
 === Compile and Run ===
 To compile: ghc sudoku.hs

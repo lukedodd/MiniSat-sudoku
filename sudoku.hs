@@ -80,6 +80,7 @@ processMinisatOut f | head (lines f) /= "SAT" = []
 	where vars = delete 0 $ map readInt $ splitOn " " $ (lines f !! 1)
 
 -- Convert variable assignments into a sudoku matrix.
+modelToMatrix [] = []
 modelToMatrix model = [[lookup i j | j <- [0..8]] | i <- [0..8]]
 	where
         cells = map varToCell $ filter ((<) 0) model
@@ -99,6 +100,7 @@ sudokuSolve matrix = do
 -- Given a sudoku string return a sudoku  matrix.
 stringToMatrix string = map (map (\ a -> readInt [a])) $ lines string
 -- Given a sudoku matrix return a nice string for viewing.
+showMatrix [] = "no soultion"
 showMatrix grid = unlines $ map (foldr ((++).show) []) grid
 
 -- Solve sudokus in file specified by first argument.

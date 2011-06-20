@@ -8,6 +8,9 @@ You can replace this with your own. See http://minisat.se/.
 
 An example puzzle file is included in "puzzles", the format should be self explanatory.
 This contains 50 sudoku puzzles - it is from http://projecteuler.net/.
+The file "harder-puzzles" contains harder sudoku problems.
+This solver performs well on these instances, where other simple solvers may perform very slowly.
+The solver also identifies unsolvable puzzles quickly.
 
 === Compile and Run ===
 To compile: ghc sudoku.hs

@@ -1,5 +1,7 @@
 Sudoku solver using reduction to boolean satisfiability (CNF) and MiniSat to solve - written in Haskell.
 
+A full description of the approach can be found here: http://www.lukedodd.com/?p=5
+
 The only dependency in addition to MiniSat is the Data.List.Split, install with cabal:
 $ cabal install Split
 
